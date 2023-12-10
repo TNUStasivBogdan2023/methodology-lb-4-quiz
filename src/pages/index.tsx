@@ -14,7 +14,7 @@ export default function Index() {
 
   const onSubmit = useCallback((data: FormData) => {
     const result = data.answers
-      .map(parseInt)
+      .map(parseFloat)
       .reduce((b, a) => a + b);
 
     setResult(result);
